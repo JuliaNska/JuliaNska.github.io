@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="gradient_heart.jpg">
+    <link rel="stylesheet" href="styl_s.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <title>Dary miłości</title>
+</head>
+<body>
+    <h1>Wylosuj słońce <br> dar dla siebie</h1>
+    <div id="wynik"></div>
+    <button class="button-40" role="button" id="start" onclick="start()">LOSUJ</button><br><br>
+    <button class="button-40" role="button" onclick="more()">WIADOMOŚĆ</button>
+    <div id="wiadomosc"></div>
+
+    <script>
+      
+        function randomNumbers() {
+            randomNumber = Math.floor(Math.random()*100) + 1;
+            return randomNumber;
+        }
+        let wynik = document.getElementById('wynik');
+        
+
+        function start() {
+            let randomNumber = randomNumbers();
+            console.log(randomNumber);
+
+            if (randomNumber === 20 || randomNumber === 70)
+            {
+                wynik.innerHTML = "<img src='zl1.png'><p>Jakiś chochoł ukradł mi prezent dla Ciebie, losuj dalej</p>";
+            } else if (randomNumber === 40 || randomNumber === 80) {
+                wynik.innerHTML = "<img src='zl2.png'><p>No dzikus kradnie dary, losuj dalej</p>";
+            } else if (randomNumber === 50 || randomNumber === 60) {
+                wynik.innerHTML = "<img src='zl3.png'><p>Ide pobić tego złodziejaszka a ty losuj dalej</p>";
+            } else if (randomNumber >= 1 && randomNumber <= 10)
+            {
+                wynik.innerHTML = "<img src='pngegg.png'><p>Bukiet róż żółtych jak słońce które rozświetliło całe moje życie dzięki tobie</p>";
+            } else if (randomNumber > 10 && randomNumber <= 19)
+            {
+                wynik.innerHTML = "<img src='czek.png'><p>Czekolada słodka jak Ty</p>";
+            } else if (randomNumber > 20 && randomNumber <=30)
+            {
+                wynik.innerHTML = "<img src='obr.png'><p>Obrączki bo pragnę żebyś została moją żoną na wieki</p>";
+            }else if (randomNumber > 30 && randomNumber <=39)
+            {
+                wynik.innerHTML = "<img src='drzewo.png'><p>Drzewo pełne mej miłości do Ciebie</p>";
+            } else if (randomNumber > 40 && randomNumber <=49)
+            {
+                wynik.innerHTML = "<img src='kos.png'><p>Ofiarowuje Ci cały wszechświat na kolanach mych</p>";
+            } else if (randomNumber > 50 && randomNumber <=59)
+            {
+                wynik.innerHTML = "<img src='loz.png'><p>Łóżko abym mogła Cię w nim przytulać na wieki</p>";
+            } else if (randomNumber > 60 && randomNumber <=69)
+            {
+                wynik.innerHTML = "<img src='mer.png' id='mer'><p>Mercedes abyś miała w życiu wszystko czego pragniesz</p>";
+            } else if (randomNumber > 70 && randomNumber <=79)
+            {
+                wynik.innerHTML = "<img src='serce.png'><p>Ofiarowuje Ci me serce bezpowrotnie na wieki wieków</p>";
+            } else if (randomNumber > 80 && randomNumber <=90) {
+                wynik.innerHTML = "<img src='szczyt.png'><p>Wyniosę Cię na wszystkie szczyty tego świata</p>";
+            } else if (randomNumber > 90 && randomNumber <=100) {
+                wynik.innerHTML = "<img src='mil.png'><p>Ma nieskończona miłość żebyś wiedziała że nigdy nie przestane Cię kochać</p>";
+            }
+
+        }
+        function more() {
+            let wiad = document.getElementById('wiadomosc');
+            let randomNumber = randomNumbers();
+
+            if (randomNumber >=1 && randomNumber <=25) {
+                wiad.innerHTML = "<h3>Kocham Cię</h3>";
+            } else if (randomNumber > 25 && randomNumber <= 50) {
+                wiad.innerHTML = "<h3>Jesteś moim całym światem</h3>";
+            } else if (randomNumber > 50 && randomNumber <=75) {
+                wiad.innerHTML = "<h3>Wyjdź za mnie proszę</h3>";
+            } else if (randomNumber > 75 && randomNumber <=100) {
+                wiad.innerHTML = "<h3>Jesteś wszystkim czego potrzebuje</h3>";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

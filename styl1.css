@@ -1,0 +1,36 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    background-image: url("table.png");
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 400%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+p {
+    font-size: 180%;
+    margin-top: 2px;
+}
+
+#start,
+#card {
+    color: #016f32;
+    width: 270px;
+    height: 50px;
+    background-color: goldenrod;
+    border-radius: 2px;
+    font-size: 150%;
+    border:0;
+    font-weight: bold;
+}
